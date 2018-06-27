@@ -10,25 +10,6 @@ const youtube = new YouTube(GOOGLE_API_KEY);
 
 const queue = new Map();
 
-client.on('ready', () => {
-console.log('Logging into discord..');
-console.log(`
-Login successful.
------------------
-RoyalDev - Discord Bot
------------------
-${client.user.username}
-Connected to:
-${client.guilds.size} servers
-${client.channels.size} channel
-${client.users.size} users
-Prefix: ${PREFIX}
------------------
-Use this url to bring your bot to a server:
-https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=2146958588585`);
-
-});
-
 client.on('warn', console.warn);
 
 client.on('error', console.error);
@@ -83,7 +64,7 @@ client.on('message', async msg => { // eslint-disable-line
 					const embed1 = new Discord.RichEmbed()
 			        .setDescription(`**اختار رقم المقطع** :
 ${videos.map(video2 => `[${++index} ] \`${video2.title}\``).join('\n')}`)
-					.setFooter("TMGameArab جميع الحقوق محفوظه لدى سرفر")
+					.setFooter("Not Detected جميع الحقوق محفوظه لدى سرفر")
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 					
 					// eslint-disable-next-line max-depth
@@ -138,7 +119,7 @@ ${videos.map(video2 => `[${++index} ] \`${video2.title}\``).join('\n')}`)
 					const embed1 = new Discord.RichEmbed()
 			        .setDescription(`**اختار رقم المقطع** :
 ${videos.map(video2 => `[${++index} ] \`${video2.title}\``).join('\n')}`)
-					.setFooter("TMGameArab جميع الحقوق محفوظه لدى سرفر")
+					.setFooter("Not Detected جميع الحقوق محفوظه لدى سرفر")
 					msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
 					
 					// eslint-disable-next-line max-depth
